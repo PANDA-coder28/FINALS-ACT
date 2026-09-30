@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Info Card</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>User Info Card</h1>
+
+      <form id="infoForm" onsubmit="return false;">
+        <label
+          >Full Name
+          <input type="text" id="fullName" />
+        </label>
+
+        <label
+          >Email
+          <input type="email" id="email" />
+        </label>
+
+        <label
+          >Age
+          <input type="number" id="age" min="1" max="120" />
+        </label>
+
+        <label
+          >Birthdate
+          <input type="date" id="birthdate" />
+        </label>
+
+        <label
+          >Phone
+          <input type="tel" id="phone" />
+        </label>
+
+        <label
+          >Favorite Food
+          <input type="text" id="food" />
+        </label>
+
+        <label
+          >Course
+          <select id="course">
+            <option value="">Select…</option>
+            <option>BS Information Technology</option>
+            <option>BS Computer Science</option>
+            <option>BS Information Systems</option>
+          </select>
+        </label>
+
+        <label
+          >Favorite Color
+          <select id="color">
+            <option>Blue</option>
+            <option>Red</option>
+            <option>Green</option>
+            <option>Purple</option>
+            <option>Orange</option>
+            <option>Pink</option>
+            <option>Black</option>
+            <option>Teal</option>
+          </select>
+        </label>
+
+        <fieldset>
+          <legend>Year Level</legend>
+          <label><input type="radio" name="year" value="1st Year" /> 1st</label>
+          <label><input type="radio" name="year" value="2nd Year" /> 2nd</label>
+          <label><input type="radio" name="year" value="3rd Year" /> 3rd</label>
+          <label><input type="radio" name="year" value="4th Year" /> 4th</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Hobbies</legend>
+          <label
+            ><input type="checkbox" name="hobby" value="Gaming" /> Gaming</label
+          >
+          <label
+            ><input type="checkbox" name="hobby" value="Music" /> Music</label
+          >
+          <label
+            ><input type="checkbox" name="hobby" value="Coding" /> Coding</label
+          >
+          <label
+            ><input type="checkbox" name="hobby" value="Sports" /> Sports</label
+          >
+        </fieldset>
+
+        <label
+          >Bio
+          <textarea id="bio" rows="3"></textarea>
+        </label>
+
+        <button type="button" id="showBtn">Show My Info</button>
+        <p id="error" class="error hidden"></p>
+      </form>
+
+      <section id="card" class="card hidden">
+        <h2 id="outName"></h2>
+        <ul id="outList"></ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
